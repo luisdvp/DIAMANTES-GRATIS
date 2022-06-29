@@ -1,0 +1,79 @@
+
+
+.generator {
+    text-align: center;
+    margin: 20px 0
+}
+
+
+.progress-bar {
+    height: 50px;
+    overflow: hidden;
+    background-color: #d2dce5;
+    margin: 0 auto;
+	margin-bottom: 1px;
+	border-radius: 30px;
+	border: 2px solid black;
+    min-width: 30px;
+    max-width: 800px;
+}
+
+.progress-bar.completed .filler {
+    
+}
+
+.progress-bar.completed .filler:before {
+    opacity: 0
+}
+
+.progress-bar .filler {
+    display: block;
+    height: 30px;
+    width: 0;
+    background: #00c50f;
+    overflow: hidden;
+    transition: all .8s ease-out;
+	animation: load 15s ;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+    background: #ffe81f73;
+  }
+  
+  25% {
+    width: 30%;
+    background: #ffe81fad;
+  }
+  
+  50% {
+    width: 60%;
+    background: #ffe81fd6;
+  }
+  
+  75% {
+    width: 96%;
+    background: #ffe81f;
+  }
+  
+  100% {
+    width: 100%;
+    background: #00c50f;
+  }
+}
+
+.progress-bar .filler:before {  
+    content: '';
+    display: block;
+    height: 20px;
+    width: 700px;
+    animation: fill 10s linear infinite;
+}
+
+.generatedcode {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+	margin-bottom: 5px;
+}
